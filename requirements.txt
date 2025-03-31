@@ -1,0 +1,8 @@
+wordcloud==1.9.3  # For generating word clouds
+matplotlib==3.8.4  # For plotting and saving word cloud images
+pillow==10.3.0  # Image processing (required by wordcloud)
+flask==3.0.0
+tweepy==4.14.0
+textblob==0.17.1
+python-dotenv==1.0.0
+praw==7.8.1
