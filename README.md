@@ -2,6 +2,8 @@
 
 This project is a web application that allows users to analyze the sentiment of posts from Twitter and Reddit. It provides real-time sentiment analysis, word cloud generation, and interactive visualizations. Users can select a platform, enter a query, and view the sentiment breakdown, frequent keywords, and related posts.
 
+Hosted here: https://social-semantic-analysis.onrender.com
+
 ## Features
 - **Multiplatform Sentiment Analysis**:
   - Supports Twitter, Reddit.
