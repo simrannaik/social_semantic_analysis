@@ -1,0 +1,200 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #98a7a7;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-in;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(209, 188, 188, 0.1);
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+.search-container {
+    margin: 20px 0;
+    position: relative;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccd6dd;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus {
+    border-color: #0a324b;
+    box-shadow: 0 0 8px rgba(12, 38, 54, 0.3);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #7256d6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #1991da;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.stats-container, .tweets-container {
+    background-color: rgb(215, 171, 255);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-container:hover, .tweets-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.tweet {
+    border-bottom: 1px solid #e1e8ed;
+    padding: 15px 0;
+    border-radius: 20;
+    transition: background-color 0.2s ease;
+}
+
+.tweet:hover {
+    background-color: #f8f9fa;
+}
+
+.tweet:last-child {
+    border-bottom: none;
+}
+
+.sentiment-positive {
+    color: #065317;
+    transition: all 0.3s ease;
+}
+
+.sentiment-positive:hover {
+    text-shadow: 0 0 5px rgba(43, 226, 125, 0.3);
+}
+
+.sentiment-negative {
+    color: #a80000;
+    transition: all 0.3s ease;
+}
+
+.sentiment-negative:hover {
+    text-shadow: 0 0 5px rgba(224, 36, 94, 0.3);
+}
+
+.sentiment-neutral {
+    color: #151a16;
+    transition: all 0.3s ease;
+}
+
+.sentiment-neutral:hover {
+    text-shadow: 0 0 5px rgba(101, 119, 134, 0.3);
+}
+
+.wordcloud-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.wordcloud-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wordcloud-container img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.wordcloud-container img:hover {
+    transform: scale(1.05);
+}
+
+select {
+    padding: 12px 15px;
+    border: 1px solid #ccd6dd;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    padding-right: 35px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23657786' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select:hover {
+    border-color: #1da1f2;
+    box-shadow: 0 0 8px rgba(29, 161, 242, 0.2);
+}
+
+select:focus {
+    outline: none;
+    border-color: #1da1f2;
+    box-shadow: 0 0 8px rgba(29, 161, 242, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

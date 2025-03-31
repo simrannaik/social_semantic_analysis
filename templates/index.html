@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Social Media Sentiment Analysis</h1>
+    
+    <div class="search-container">
+        <form id="searchForm">
+            <select id="platformSelect">
+                <option value="twitter">Twitter</option>
+                <option value="reddit">Reddit</option>
+            </select>
+            <input type="text" id="queryInput" placeholder="Enter topic to analyze..." required>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+
+    <div id="loading" class="hidden">
+        Analyzing posts...
+    </div>
+
+    <div id="results" class="hidden">
+        <div class="stats-container">
+            <h2>Analysis Statistics</h2>
+            <div id="statsContent"></div>
+        </div>
+
+        <div class="wordcloud-container">
+            <h2>Word Cloud</h2>
+            <img id="wordcloudImg" src="" alt="Word Cloud">
+        </div>
+
+        <div class="tweets-container">
+            <h2>Analyzed Posts</h2>
+            <div id="tweetsContent"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
